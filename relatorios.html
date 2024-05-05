@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatórios para Exportação</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-image: linear-gradient(45deg, yellow, cyan, blue);
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    header {
+        background: ;
+        color: #fff;
+        padding-top: 30px;
+        max-height: 40px;
+        border-bottom: #0779e4 3px solid;
+    }
+    header h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .content {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        flex-wrap: nowrap;
+    }
+    .content div {
+        width: 45%; /* Reduzir um pouco a largura para melhorar o espaçamento */
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+        margin-right: 10px; /* Adiciona uma margem à direita de cada div */
+    }
+    .content div:last-child {
+        margin-right: 0; /* Remove a margem da última div para manter o alinhamento correto */
+    }
+    .container {
+        width: 90%; /* Aumentar a largura do container se necessário */
+        margin: auto;
+        overflow: hidden;
+        padding: 20px 0; /* Adicionar um pouco de padding vertical */
+    }
+    table {
+        width: 100%;
+        margin-top: 15px;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid #ccc;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        font-weight: bold;
+    }
+    th {
+        background-color: #333;
+        color: white;
+    }
+    .export-btns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;  /* Espaço entre os botões */
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 10px;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <img id="#energy"  src="energy.png" alt="" style="width: 100px;
+        height: 100%; margin-left: 10px;" >
+        <h4 style="margin-left: 10px;">Relatórios para Exportação</h4>
+        <!-- <h5>Relatórios para Exportação</h5> -->
+    </header>
+    <div class="container">
+        <div class="content">
+            <div>
+                <h2>Relatório Completo</h2>
+                <p>Exporte todos os dados acumulados em um arquivo único.</p>
+                <div class="export-btns">
+                    <button onclick="exportReport('xlsx')">Exportar Excel</button>
+                    <br/>
+                    <button onclick="exportReport('csv')">Exportar CSV</button>
+                    <br/>
+                    <button onclick="exportReport('pdf')">Exportar PDF</button>
+                </div>
+            </div>
+            <div>
+                <h2>Relatório Personalizado</h2>
+                <p>Selecione parâmetros específicos para exportar dados personalizados.</p>
+                <div class="export-btns">
+                    <button onclick="exportReport('xlsx')">Excel</button>
+                    <button onclick="exportReport('csv')">CSV</button>
+                </div>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>Relatório</th>
+                <th>Formato</th>
+                <th>Data</th>
+            </tr>
+            <tr>
+                <td>Relatório Completo</td>
+                <td>Excel, CSV, PDF</td>
+                <td>2024-05-04</td>
+            </tr>
+            <tr>
+                <td>Relatório Personalizado</td>
+                <td>Excel, CSV</td>
+                <td>2024-05-03</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function exportReport(format) {
+            // Simulando a função de exportação
+            alert("Exportando relatório em formato " + format);
+        }
+    </script>
+    <br/>
+</body>
+</html>
